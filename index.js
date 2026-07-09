@@ -4,7 +4,7 @@ async function getTitans(){
     const response = await fetch('https://api.attackontitanapi.com/titans');
     const result = await response.json();
 
-    displayTitans(result.results);
+    return result.results;
 }
 
 function displayTitans(titansArray) {
@@ -36,4 +36,12 @@ function displayTitans(titansArray) {
     });
 }
 
-getTitans();
+async function runCode(){
+    const resultOFGetTitans = await getTitans();
+
+    console.log("Bellow is the result of get titan");
+    console.log(resultOFGetTitans);
+
+     displayTitans(resultOFGetTitans);
+}
+runCode();
