@@ -8,10 +8,7 @@ async function getTitans(){
     //await response.jason() mag convert nan data sa json format para magamit sa javascript
     const result = await response.json();
 
-<<<<<<< HEAD
     //magkuhan nan list nan titan na ya convert sa jason then return 
-=======
->>>>>>> 1b67a6fc9c0b1256d5e7e9f7031f2885fb64699d
     return result.results;
 }
 
@@ -54,7 +51,6 @@ function displayTitans(titansArray) {
     });
 }
 
-<<<<<<< HEAD
 //async function para magamit an await keyword
 async function runCode(){
     //maghuwat ini na matapos ni getTitans() pag download an data tapos save niya sa resultOFGetTitans na variable
@@ -69,14 +65,3 @@ async function runCode(){
 }
 //execute niya an runcode function
 runCode();
-=======
-async function runCode(){
-    const resultOFGetTitans = await getTitans();
-
-    console.log("Bellow is the result of get titan");
-    console.log(resultOFGetTitans);
-
-     displayTitans(resultOFGetTitans);
-}
-runCode();
->>>>>>> 1b67a6fc9c0b1256d5e7e9f7031f2885fb64699d
